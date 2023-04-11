@@ -1154,23 +1154,323 @@
 
 // export default App
 
-import React, { useState } from 'react'
-import Login from './components/session-2/Login'
+// import React, { useState } from 'react'
+// import Login from './components/session-2/Login'
+
+// const App = () => {
+//     const [count,setCount] = useState(true)
+
+//   return (
+//     <div>App
+//         {
+//             count && <Login/>
+//         }
+//         <button onClick={() => setCount(!count)}>Toggle</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//-----------------------------------------------session-3-------------------------------------------
+
+// import React, { useState } from 'react';
+
+// const App = () => {
+//   const [count,setCount] = useState(0);
+//   return(
+//     <div>App
+//       <h1>{count}</h1>
+//       <button onClick={() => setCount(count+1)}>+</button>
+//       <button onClick={() => setCount(count-1)}>-</button>
+//       <button onClick={() => setCount(0)}>0</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+// import React,{ Component } from 'react';
+
+// class App extends Component{
+//   constructor(){
+//     super();
+//     this.state ={
+//       count:0
+//     }
+//   }
+//   render(){
+//     return(
+//       <div>App
+//         <h1>{this.state.count}</h1>
+//         <button onClick={() => this.setState({count:this.state.count+1})}>+</button>
+//         <button onClick={() => this.setState({count:this.state.count-1})}>-</button>
+//         <button onClick={() => this.setState({count:0})}>0</button>
+//       </div>
+//     )
+//   }
+// }
+// export default App
+
+// import React from 'react'
+// import Chaild from './components/session-3/Chaild'
+
+// const App = () => {
+//   let obj = {
+//     name:"rakesh",age:23,id:5882
+//   }
+
+//   let arr = [
+//     {
+//       name:"rakesh",age:23,id:5882
+//     },
+//     {
+//       name:"dur",age:24,id:100
+//     },
+//     {
+//       name:"v",age:25,id:101
+//     }
+//   ]
+//   return (
+//     <div>App
+//       <Chaild name='rakesh' obj={obj} arr={arr} />
+//     </div>
+//   )
+// }
+
+// export default App
+
+// import React, { createContext } from 'react'
+// import {BrowserRouter,Routes,Route,Link} from 'react-router-dom'
+// import Home from './components/session-3/routing/Home'
+// import Student from './components/session-3/routing/Student'
+// import About from './components/session-3/routing/About'
+// import './components/session-3/routing/Styles.css'
+// import UserDetails from './components/session-3/routing/UserDetails'
+// import Blog from './components/session-3/routing/Blog'
+// import ToDo from './components/session-3/routing/ToDo'
+// export const store = createContext();
+// const App = () => {
+//   const data = [
+//     {name:"rakesh",age:23,id:5882},{name:"du",age:24,id:100},{name:"vish",age:25,id:101}
+//   ]
+//   return (
+//     <store.Provider value={data}>
+//     <BrowserRouter>
+//     <div className='nav'>
+//       <ul>
+//         <li><Link to='/'>Home</Link></li>
+//         <li><Link to='/student'>Student</Link></li>
+//         <li><Link to='/about'>About</Link></li>
+//       </ul>
+//     </div>
+//     <Routes>
+//       <Route path={'/'} element={<Home/>}/>
+//       <Route path={'/student'} element={<Student/>}/>
+//       <Route path={'/student/:id'} element={<UserDetails/>}/>
+//       <Route path={'/about'} element={<About/>}>
+//         <Route path='blog' element={<Blog/>}/>
+//         <Route index element={<Blog/>}/>
+//         <Route path='todo' element={<ToDo/>}/>
+//       </Route>
+//     </Routes>    
+//     </BrowserRouter>
+//     </store.Provider>
+//   )
+// }
+
+// export default App
+
+// import React, { useEffect, useState } from 'react'
+// import axios from 'axios'
+
+// const App = () => {
+//   const [data,setData] = useState([]);
+  
+//   useEffect(() => {
+//     // let obj = {
+//     //   method:"POST",
+//     //   headers:{
+//     //     "Content-Type":"application/json"
+//     //   },
+//     //   body:JSON.stringify({name:"rakesh",email:"rak@gmail.com"})
+//     // }
+//     // fetch('https://jsonplaceholder.typicode.com/posts',obj).then((res) => res.json()).then((data) => console.log(data))
+//     // axios.post('https://jsonplaceholder.typicode.com/posts',{name:"rakesh",email:"rak@gmail.com"}).then((data) => console.log(data.data))
+//   })
+//   return (
+//     <div>App
+//       <button>post</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// import React from 'react'
+// import Hoc from './components/session-3/Hoc'
+
+// const App = () => {
+//   return (
+//     <div>App</div>
+//   )
+// }
+
+// export default Hoc(App)
+
+// import React  from 'react'
+// import {BrowserRouter,Routes,Route} from 'react-router-dom'
+// import Dataaa from './components/session-3/Dataaa';
+// import Login from './components/session-3/routing/Login';
+
+// const App = () => {
+//   return (<BrowserRouter>
+//     <Routes>
+//       <Route path={'/dataa'} element={<Dataaa/>}/>
+//       <Route path={'/login'} element={<Login/>}/>
+//     </Routes>
+//     </BrowserRouter>
+//   )
+// }
+
+// export default App
+
+// import React, { useState } from 'react'
+
+// const App = () => {
+//   const [data,setData] = useState([])
+//   const [name,setName] = useState('')
+
+//   const add = () => {
+//     setData([...data,{name:name}])
+//     setName('')
+//   }
+//   const del = (i) => {
+//     let newdata = [...data];
+//     newdata.splice(i,1)
+//     setData([...newdata])
+//   }
+//   return (
+//     <div>App
+//       <input type='text' value={name} onChange={(e) => setName(e.target.value)}/>
+//       <button onClick={add}>add</button>
+//       <hr/>
+//       <div>
+//         {
+//           data.map((e,i) => {
+//             return(
+//               <div key={i}>
+//                 <li>{e.name}</li>
+//                 <button onClick={() => del(i)}>del</button>
+//               </div>
+//             )
+//           })
+//         }
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+//-------------------------------------------REACTJS-RIGOROUS-MOCK-BY-AKARSH-----------------------------------------------------
+
+// import React, { useReducer } from 'react'
+
+// const App = () => {
+//   const inivalue = {
+//     count:0
+//   }
+//   const reducer = (state,action) => {
+//     if(action.type === 'inc'){
+//       return {count:state.count+1}
+//     }
+//     if(action.type === 'dec'){
+//       return {count:state.count-1}
+//     }
+//     if(action.type === 'reset'){
+//       return {count:0}
+//     }
+//   }
+//   const [state,dispatch] = useReducer(reducer, inivalue)
+//   return (
+//     <div>App
+//       <h1>{state.count}</h1>
+//       <button onClick={() => dispatch({type:"inc"})}>increment</button><br/>
+//       <button onClick={() => dispatch({type:"dec"})}>decrement</button><br/>
+//       <button onClick={() => dispatch({type:"reset"})}>reset</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// import React, { Component } from 'react'
+
+// export default class App extends Component {
+//   static getDerivedStateFromProps(props,state){
+//     console.log('getDerivedStateFromProps');
+//   }
+//   render() {
+//     console.log('render');
+//     return (
+//       <div>App</div>
+//     )
+//   }
+// }
+
+// import React from 'react'
+// import Hoc from './components/Hoc'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <h1>Hello this is App component</h1>
+//     </div>
+//   )
+// }
+
+// export default Hoc(App);
+
+import React, { useEffect, useState } from 'react'
 
 const App = () => {
-    const [count,setCount] = useState(true)
+const [data,setData] = useState([]);
 
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/comments').then((res) => res.json()).then((data) => setData(data))
+    .catch((err) => console.log(err))
+  })
   return (
-    <div>App
-        {
-            count && <Login/>
-        }
-        <button onClick={() => setCount(!count)}>Toggle</button>
+    <div>
+
+        <table border="2px">
+          <tr>
+            <td>name</td>
+            <td>email</td>
+            <td>id</td>
+          </tr>
+          {
+            data.map((e) => {
+              return(
+                <tr key={e.id}>
+                  <td>{e.name}</td>
+                  <td>{e.email}</td>
+                  <td>{e.id}</td>
+                </tr>
+              )
+            })
+          }
+        </table>
+      
     </div>
   )
 }
 
 export default App
+
 
 
 
